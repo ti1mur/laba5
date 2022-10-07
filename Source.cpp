@@ -36,4 +36,5 @@ int main() {
 	for (int shet = i_start_max; shet < i_end_max; shet++) {
 		cout << massiv[shet] << " ";
 	}
+	delete[] massiv;
 }
