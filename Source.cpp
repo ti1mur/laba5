@@ -5,10 +5,10 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Rus");
 	int n, x, i_start, i_end, i_start_max, i_end_max, len, lenmax;
-	cout << "Ââåäèòå æåëàåìîå êîë-âî ýëåìåíòîâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¶ÐµÐ»Ð°ÐµÐ¼Ð¾Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: ";
 	cin >> n;
 	int* massiv = new int[n];
-	cout << "Ââåäèòå ïîñëåäîâàòåëüíîñòü ýëåìåíòîâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: ";
 	for (int i = 0; i < n; i++) {
 		cin >> x;
 		massiv[i] = x;
