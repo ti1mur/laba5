@@ -26,7 +26,7 @@ int main() {
 			i_end_max = i_end;
 		}
 		if (massiv[i_end] <= 0){
-			len = i_end - i_start + 1;
+			len = 0;
 			i_start = i_end + 1;
 		}
 		if ((i_end == n - 1) && (len = lenmax) && (massiv[i_end] > 0)) {
