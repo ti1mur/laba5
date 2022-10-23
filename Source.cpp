@@ -20,17 +20,14 @@ int main() {
 	i_end_max = 0;
 	for (i_end = 0; i_end < n; i_end++) {
 		len = i_end - i_start + 1;
-		if (len > lenmax) {
-			lenmax = len;
-			i_start_max = i_start;
-			i_end_max = i_end;
-		}
 		if (massiv[i_end] <= 0){
 			len = 0;
 			i_start = i_end + 1;
 		}
-		if ((i_end == n - 1) && (len = lenmax) && (massiv[i_end] > 0)) {
-			i_end_max += 1;
+		if (len > lenmax) {
+			lenmax = len;
+			i_start_max = i_start;
+			i_end_max = i_end + 1;
 		}
 	}
 	for (int shet = i_start_max; shet < i_end_max; shet++) {
