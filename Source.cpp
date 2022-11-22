@@ -2,29 +2,35 @@
 
 using namespace std;
 
-int triangle(int a, int b, int c) {
-	if ((a > 0) && (b > 0) && (c > 0)) {
-		if ((a < b + c) && (b < c + a) && (c < a + b)) {
-			return 1;
-		}
-		else {
-			return 0;
-		}
+char* concatenation(const char* string1, const char* string2) {
+	long long int lengh1 = 0, lengh2 = 0;
+	int i = 0;
+	while (string1[i] != '\0') {
+		lengh1++;
+		i++;
 	}
-	else {
-		return 0;
+	i = 0;
+	while (string2[i] != '\0') {
+		lengh2++;
+		i++;
 	}
+	 long long int lengh = lengh1 + lengh2;
+	char* result = new char[lengh + 1];
+	for (int i = 0; i < lengh1; i++) {
+		result[i] = string1[i];
+	}
+	for (int i = lengh1; i < lengh; i++) {
+		result[i] = string2[i-lengh1];
+	}
+	result[lengh] = '\0';
+	return result;
 }
 int main() {
-	int m[10] = { 1, 2, 3, 4, -5, 6, 0, 7, -1000, 10};
-	for (int shet1 = 0; shet1 < sizeof(m)/4 - 2; shet1++) {
-		for (int shet2 = shet1 + 1; shet2 < sizeof(m) / 4 - 1; shet2++) {
-			for (int shet3 = shet2 + 1; shet3 < sizeof(m) / 4 ; shet3++) {
-				if (triangle(m[shet1], m[shet2], m[shet3]) == 1) {
-					cout << m[shet1] << "  " << m[shet2] << "  " << m[shet3] << endl;
-				}
-			}
-		}
+	char* s = concatenation("Hello", "World");
+	int i = 0;
+	while (s[i] != '\0') {
+		cout << s[i];
+		i++;
 	}
 	return 0;
 }
