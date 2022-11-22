@@ -26,8 +26,11 @@ char* concatenation(const char* string1, const char* string2) {
 	return result;
 }
 int main() {
+	setlocale(LC_ALL, "Rus");
+	cout << "Ведены строки: Hello, World" << endl;;
 	char* s = concatenation("Hello", "World");
 	int i = 0;
+	cout << "Результат: ";
 	while (s[i] != '\0') {
 		cout << s[i];
 		i++;
